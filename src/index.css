@@ -40,3 +40,16 @@ code {
 .p-lg {
   padding: 20px;
 }
+
+.f-grow {
+  flex-grow: 1;
+}
+
+.f-column {
+  flex-direction: column;
+}
+
+.p-vertical-md {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
