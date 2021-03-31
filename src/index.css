@@ -53,3 +53,23 @@ code {
   padding-top: 10px;
   padding-bottom: 10px;
 }
+
+.border-bottom {
+  border-bottom: 1px solid rgb(189, 189, 189);
+}
+
+.m-bottom-lg {
+  margin-bottom: 20px;
+}
+
+.bold-6 {
+  font-weight: 600;
+}
+
+.font-md {
+  font-size: 1.2em;
+}
+
+.p-bottom-md {
+  padding-bottom: 10px;
+}
