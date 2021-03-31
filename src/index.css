@@ -73,3 +73,10 @@ code {
 .p-bottom-md {
   padding-bottom: 10px;
 }
+
+input[type=text] {   
+    /* Remove First */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
