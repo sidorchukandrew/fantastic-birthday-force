@@ -16,7 +16,7 @@ export default function ExtraInformation(props) {
 
         console.log(sectionCopy);
         if (props.onChange) {
-            props.onChange("Additional Information", sectionCopy);
+            props.onChange("additionalInformation", sectionCopy);
         }
     }
 
@@ -24,12 +24,12 @@ export default function ExtraInformation(props) {
         <div className="light-blue-bg rounded-sm">
             <FormField
                 name="Enter rank"
-                onChange={(updates) => handleFieldUpdated("Rank", updates)}
+                onChange={(updates) => handleFieldUpdated("rank", updates)}
             />
             <DropdownFormField
                 options={YES_OR_NO_OPTIONS}
                 placeholder="Yes or no"
-                onChange={(event, data) => handleFieldUpdated("National guard or reserves", data.value)}
+                onChange={(event, data) => handleFieldUpdated("nationalOrReserves", data.value)}
             >
                 Present membership in national guard or reserves?
             </DropdownFormField>
@@ -38,16 +38,16 @@ export default function ExtraInformation(props) {
 
     let handleHasMilitaryService = (value) => {
         setHasMilitaryService(value);
-        handleFieldUpdated("Military service", value);
+        handleFieldUpdated("militaryService", value);
 
         if (!value) {
             let sectionCopy = JSON.parse(JSON.stringify(section));
-            delete sectionCopy['Rank'];
-            delete sectionCopy['National guard or reserves'];
+            delete sectionCopy['rank'];
+            delete sectionCopy['nationalOrReserves'];
             setSection(sectionCopy);
 
             if (props.onChange) {
-                props.onChange("Additional Information", sectionCopy);
+                props.onChange("additionalInformation", sectionCopy);
             }
         }
     }
@@ -58,7 +58,7 @@ export default function ExtraInformation(props) {
             <FormField
                 textarea
                 name="List any special skills or activities (athletic, civic, etc...)"
-                onChange={(updates) => handleFieldUpdated("Special skills", updates)}
+                onChange={(updates) => handleFieldUpdated("specialSkills", updates)}
             />
 
             <DropdownFormField

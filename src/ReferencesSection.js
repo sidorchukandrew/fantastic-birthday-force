@@ -17,7 +17,7 @@ export default function ReferencesSection(props) {
         setSection(sectionCopy);
 
         if (props.onChange) {
-            props.onChange("References", sectionCopy);
+            props.onChange("referencesInformation", sectionCopy);
         }
     }
 
@@ -33,22 +33,22 @@ export default function ReferencesSection(props) {
             <div className="d-flex rows-on-small">
                 <FormField
                     name="Name"
-                    onChange={(updates) => handleFieldUpdated(0, "Name", updates)}
+                    onChange={(updates) => handleFieldUpdated(0, "name", updates)}
                 />
                 <FormField
                     name="Phone number"
                     type="tel"
-                    onChange={(updates) => handleFieldUpdated(0, "Phone number", updates)}
+                    onChange={(updates) => handleFieldUpdated(0, "phoneNumber", updates)}
                 />
                 <FormField
                     name="Business name"
 
-                    onChange={(updates) => handleFieldUpdated(0, "Business name", updates)}
+                    onChange={(updates) => handleFieldUpdated(0, "businessName", updates)}
                 />
                 <FormField
                     name="Years acquainted"
                     type="number"
-                    onChange={(updates) => handleFieldUpdated(0, "Years acquainted", updates)}
+                    onChange={(updates) => handleFieldUpdated(0, "yearsAcquainted", updates)}
                 />
             </div>
 
@@ -56,22 +56,22 @@ export default function ReferencesSection(props) {
             <div className="d-flex rows-on-small">
                 <FormField
                     name="Name"
-                    onChange={(updates) => handleFieldUpdated(1, "Name", updates)}
+                    onChange={(updates) => handleFieldUpdated(1, "name", updates)}
                 />
                 <FormField
                     name="Phone number"
                     type="tel"
-                    onChange={(updates) => handleFieldUpdated(1, "Phone number", updates)}
+                    onChange={(updates) => handleFieldUpdated(1, "phoneNumber", updates)}
                 />
                 <FormField
                     name="Business name"
 
-                    onChange={(updates) => handleFieldUpdated(1, "Business name", updates)}
+                    onChange={(updates) => handleFieldUpdated(1, "businessName", updates)}
                 />
                 <FormField
                     name="Years acquainted"
                     type="number"
-                    onChange={(updates) => handleFieldUpdated(1, "Years acquainted", updates)}
+                    onChange={(updates) => handleFieldUpdated(1, "yearsAcquainted", updates)}
                 />
             </div>
 
@@ -79,22 +79,22 @@ export default function ReferencesSection(props) {
             <div className="d-flex rows-on-small">
                 <FormField
                     name="Name"
-                    onChange={(updates) => handleFieldUpdated(2, "Name", updates)}
+                    onChange={(updates) => handleFieldUpdated(2, "name", updates)}
                 />
                 <FormField
                     name="Phone number"
                     type="tel"
-                    onChange={(updates) => handleFieldUpdated(2, "Phone number", updates)}
+                    onChange={(updates) => handleFieldUpdated(2, "phoneNumber", updates)}
                 />
                 <FormField
                     name="Business name"
 
-                    onChange={(updates) => handleFieldUpdated(2, "Business name", updates)}
+                    onChange={(updates) => handleFieldUpdated(2, "businessName", updates)}
                 />
                 <FormField
                     name="Years acquainted"
                     type="number"
-                    onChange={(updates) => handleFieldUpdated(2, "Years acquainted", updates)}
+                    onChange={(updates) => handleFieldUpdated(2, "yearsAcquainted", updates)}
                 />
             </div>
         </div>

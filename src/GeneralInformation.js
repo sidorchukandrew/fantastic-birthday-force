@@ -14,7 +14,7 @@ export default function GeneralInformation(props) {
         setSection(sectionCopy);
 
         if (props.onChange) {
-            props.onChange("General Information", sectionCopy);
+            props.onChange("generalInformation", sectionCopy);
         }
     }
 
@@ -25,42 +25,42 @@ export default function GeneralInformation(props) {
             <FormField
                 name="Full Name"
                 placeholder="Example: John Doe"
-                onChange={(updates) => handleFieldUpdated("Full name", updates)}
+                onChange={(updates) => handleFieldUpdated("fullName", updates)}
             />
 
             <FormField
                 name="Social Security Number"
                 placeholder="123-45-6789"
-                onChange={(updates) => handleFieldUpdated("Social security number", updates)}
+                onChange={(updates) => handleFieldUpdated("ssn", updates)}
             />
 
             <div className="bold-6 p-md">Address Details</div>
             <FormField
                 name="Street Name"
-                onChange={(updates) => handleFieldUpdated("Street name", updates)}
+                onChange={(updates) => handleFieldUpdated("streetName", updates)}
             />
 
             <FormField
                 name="City"
-                onChange={(updates) => handleFieldUpdated("City", updates)}
+                onChange={(updates) => handleFieldUpdated("city", updates)}
             />
 
             <FormField
                 name="State"
-                onChange={(updates) => handleFieldUpdated("State", updates)}
+                onChange={(updates) => handleFieldUpdated("state", updates)}
             />
 
             <FormField
                 type="tel"
                 name="Phone Number"
                 placeholder="(555) 552-0192"
-                onChange={(updates) => handleFieldUpdated("Phone number", updates)}
+                onChange={(updates) => handleFieldUpdated("phoneNumber", updates)}
             />
 
             <DropdownFormField
                 options={YES_OR_NO_OPTIONS}
                 placeholder="Yes or no"
-                onChange={(event, data) => handleFieldUpdated("Over 18", data.value)}
+                onChange={(event, data) => handleFieldUpdated("over18", data.value)}
             >
                 Are you 18 years or older?
             </DropdownFormField>
@@ -68,7 +68,7 @@ export default function GeneralInformation(props) {
             <DropdownFormField
                 options={YES_OR_NO_OPTIONS}
                 placeholder="Yes or no"
-                onChange={(event, data) => handleFieldUpdated("Eligible to work in the US", data.value)}
+                onChange={(event, data) => handleFieldUpdated("eligibleForWork", data.value)}
             >
                 Are you currently eligible to work in the United States?
             </DropdownFormField>

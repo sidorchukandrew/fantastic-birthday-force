@@ -15,7 +15,7 @@ export default function EmploymentInformation(props) {
         setSection(sectionCopy);
 
         if (props.onChange) {
-            props.onChange("Employment Information", sectionCopy);
+            props.onChange("employmentInformation", sectionCopy);
         }
     }
 
@@ -23,7 +23,7 @@ export default function EmploymentInformation(props) {
         <div className="light-blue-bg rounded-sm">
             <FormField
                 name="Where are you currently employed?"
-                onChange={(updates) => handleFieldUpdated("Current employment", updates)}
+                onChange={(updates) => handleFieldUpdated("currentEmployment", updates)}
             />
         </div>
     );
@@ -35,7 +35,7 @@ export default function EmploymentInformation(props) {
             <FormField
                 name="Date you can start working"
                 placeholder="12/12/2021"
-                onChange={(updates) => handleFieldUpdated("Start date", updates)}
+                onChange={(updates) => handleFieldUpdated("startDate", updates)}
             />
 
             <FormField
@@ -43,7 +43,7 @@ export default function EmploymentInformation(props) {
                 placeholder="Amount"
                 label="$"
                 type="number"
-                onChange={(updates) => handleFieldUpdated("Desired salary", updates)}
+                onChange={(updates) => handleFieldUpdated("desiredSalary", updates)}
             />
 
             <DropdownFormField
@@ -58,7 +58,7 @@ export default function EmploymentInformation(props) {
 
             <FormField
                 name="Who were you referred by?"
-                onChange={(updates) => handleFieldUpdated("Referred by", updates)}
+                onChange={(updates) => handleFieldUpdated("referredBy", updates)}
             />
         </div >
     );

@@ -26,7 +26,7 @@ export default function EducationInformation(props) {
             setSection(sectionCopy);
 
             if (props.onChange) {
-                props.onChange("Education Information", sectionCopy);
+                props.onChange("educationInformation", sectionCopy);
             }
 
             setHasAttendedCollege(false);
@@ -37,12 +37,12 @@ export default function EducationInformation(props) {
         <div className="light-blue-bg rounded-sm">
             <FormField
                 name="Subject studied"
-                onChange={(updates) => handleFieldUpdated("Subject studied", updates)}
+                onChange={(updates) => handleFieldUpdated("subjectStudied", updates)}
             />
             <FormField
                 name="Name and location of college"
                 placeholder="SUNY Oswego at Oswego, NY"
-                onChange={(updates) => handleFieldUpdated("Name of college", updates)}
+                onChange={(updates) => handleFieldUpdated("college", updates)}
             />
         </div>
     );
@@ -53,7 +53,7 @@ export default function EducationInformation(props) {
         setSection(sectionCopy);
 
         if (props.onChange) {
-            props.onChange("Education Information", sectionCopy);
+            props.onChange("educationInformation", sectionCopy);
         }
     }
 
