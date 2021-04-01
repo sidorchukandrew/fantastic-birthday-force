@@ -12,6 +12,7 @@ import PartyPerformerJob from './PartyPerformerJob';
 import PartyManagerJob from './PartyManagerJob';
 import logo from "./android-chrome-512x512.png";
 import { Button } from 'semantic-ui-react';
+import SuccessfulSubmission from './SuccessfulSubmission';
 
 
 function App() {
@@ -40,6 +41,12 @@ function App() {
             <PartyManagerJob />
           </Route>
           <Route path="/jobs">
+            <JobsListing />
+          </Route>
+          <Route path="/success">
+            <SuccessfulSubmission />
+          </Route>
+          <Route path="/">
             <JobsListing />
           </Route>
         </Switch>

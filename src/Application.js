@@ -7,23 +7,42 @@ import GeneralInformation from "./GeneralInformation";
 import ReferencesSection from "./ReferencesSection";
 import ConfirmationSection from "./ConfirmationSection";
 import { useState } from "react";
-import { useParams } from "react-router";
+import { useParams, useHistory } from "react-router";
 import { toJobName } from "./NavUtils";
+import applicationsApi from "./api/applications";
 
 export default function Application() {
     const [application, setApplication] = useState({});
     const [confirmed, setConfirmed] = useState(false);
+    const [loading, setLoading] = useState(false);
 
     const params = useParams();
     const jobName = toJobName(params.name);
-    console.log(jobName);
+
+    const router = useHistory();
 
     let handleSectionUpdated = (section, updates) => {
-        console.log("Section updated!", updates);
         let applicationCopy = JSON.parse(JSON.stringify(application));
         applicationCopy[section] = updates;
 
         setApplication(applicationCopy);
+    }
+
+    let handleSubmit = async () => {
+        if (confirmed) {
+            setLoading(true);
+            let applicationCopy = JSON.parse(JSON.stringify(application));
+            applicationCopy.position = jobName;
+            setApplication(applicationCopy);
+            try {
+                await applicationsApi.postApplication(applicationCopy);
+                router.push("/success");
+            } catch (error) {
+                console.log(error);
+            } finally {
+                setLoading(false);
+            }
+        }
     }
 
     return (
@@ -55,6 +74,8 @@ export default function Application() {
                 <Button
                     color="blue"
                     disabled={!confirmed}
+                    onClick={handleSubmit}
+                    loading={loading}
                 >
                     Submit Your Application
                 </Button>
