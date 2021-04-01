@@ -19,3 +19,5 @@ export const EDUCATION_LEVEL_OPTIONS = [
     { text: EDUCATION_LEVELS.MASTERS, value: EDUCATION_LEVELS.MASTERS },
     { text: EDUCATION_LEVELS.PHD, value: EDUCATION_LEVELS.PHD },
 ];
+
+export const GENDER_OPTIONS = [{ text: "Male", value: "Male" }, { text: "Female", value: "Female" }];

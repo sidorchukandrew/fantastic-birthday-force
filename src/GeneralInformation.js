@@ -1,6 +1,6 @@
 import SectionTitle from "./SectionTitle";
 import FormField from "./FormField";
-import { YES_OR_NO_OPTIONS } from "./OptionsUtils";
+import { GENDER_OPTIONS, YES_OR_NO_OPTIONS } from "./OptionsUtils";
 import DropdownFormField from "./DropdownFormField";
 import { useState } from "react";
 
@@ -17,6 +17,16 @@ export default function GeneralInformation(props) {
             props.onChange("generalInformation", sectionCopy);
         }
     }
+
+    let genderField = (
+        <DropdownFormField
+            options={GENDER_OPTIONS}
+            placeholder="Male or female"
+            onChange={(event, data) => handleFieldUpdated("over18", data.value)}
+        >
+            Select your gender
+        </DropdownFormField>
+    );
 
     return (
         <div className="m-bottom-lg">
@@ -64,6 +74,8 @@ export default function GeneralInformation(props) {
             >
                 Are you 18 years or older?
             </DropdownFormField>
+
+            {props.showGender ? genderField : ""}
 
             <DropdownFormField
                 options={YES_OR_NO_OPTIONS}

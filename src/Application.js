@@ -52,6 +52,7 @@ export default function Application() {
             </div>
             <GeneralInformation
                 onChange={(section, updates) => handleSectionUpdated(section, updates)}
+                showGender={jobName === "Party Performer"}
             />
             <EmploymentInformation
                 onChange={(section, updates) => handleSectionUpdated(section, updates)}
