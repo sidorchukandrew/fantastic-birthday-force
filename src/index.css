@@ -14,7 +14,7 @@ code {
 
 .App {
   margin: auto;
-  max-width: 800px;
+  max-width: 700px;
 }
 
 .d-flex {
@@ -31,6 +31,10 @@ code {
 
 .p-sm {
   padding: 5px;
+}
+
+.p-top-md {
+  padding-top: 10px;
 }
 
 .p-md {
@@ -74,10 +78,45 @@ code {
   padding-bottom: 10px;
 }
 
+.p-horiz-md {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.light-blue-bg {
+  background: rgba(195, 240, 255, 0.48);
+}
+
 input[type=text] {   
     /* Remove First */
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
     box-shadow: none;
+}
+.rounded-sm {
+  border-radius: .28571429rem;
+}
+
+.rows-on-small {
+  flex-direction: row;
+}
+
+.line-spaced {
+  line-height: 1.9;
+  font-size: .8em;
+}
+
+@media (max-width: 650px) {
+  .rows-on-small {
+    flex-direction: column;
+  }
+
+  .line-spaced {
+    line-height: 1.6;
+  }
+}
+
+.light-grey-bg {
+  background: rgba(228, 228, 228, 0.63);
 }

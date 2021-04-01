@@ -1,19 +1,40 @@
-import { Input, Label } from "semantic-ui-react";
+import { Form, Input, Label, TextArea } from "semantic-ui-react";
 import FormFieldLabel from "./FormFieldLabel";
 
 export default function FormField(props) {
-    return (
-        <div className="p-vertical-md f-grow">
-            <FormFieldLabel>{props.name}</FormFieldLabel>
-            <Input
-                type={props.type ? props.type : ""}
+
+    let handleOnChange = (value) => {
+        if (props.onChange) {
+            props.onChange(value);
+        }
+    }
+
+    let input = (
+        <Input
+            type={props.type ? props.type : ""}
+            placeholder={props.placeholder ? props.placeholder : props.name}
+            fluid
+            labelPosition="left"
+            onChange={(event) => handleOnChange(event.target.value)}
+        >
+            {props.label ? <Label>{props.label}</Label> : ""}
+            <input />
+        </Input>
+    );
+
+    let textarea = (
+        <Form>
+            <TextArea
                 placeholder={props.placeholder ? props.placeholder : props.name}
-                fluid
-                labelPosition="left"
-            >
-                {props.label ? <Label>{props.label}</Label> : ""}
-                <input />
-            </Input>
+                onChange={(event) => handleOnChange(event.target.value)}
+            />
+        </Form>
+    );
+
+    return (
+        <div className="p-md f-grow">
+            <FormFieldLabel>{props.name}</FormFieldLabel>
+            {props.textarea ? textarea : input}
         </div>
     );
 }
