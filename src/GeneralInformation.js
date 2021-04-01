@@ -22,7 +22,7 @@ export default function GeneralInformation(props) {
         <DropdownFormField
             options={GENDER_OPTIONS}
             placeholder="Male or female"
-            onChange={(event, data) => handleFieldUpdated("over18", data.value)}
+            onChange={(event, data) => handleFieldUpdated("gender", data.value)}
         >
             Select your gender
         </DropdownFormField>
