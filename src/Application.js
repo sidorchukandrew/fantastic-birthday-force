@@ -7,10 +7,16 @@ import GeneralInformation from "./GeneralInformation";
 import ReferencesSection from "./ReferencesSection";
 import ConfirmationSection from "./ConfirmationSection";
 import { useState } from "react";
+import { useParams } from "react-router";
+import { toJobName } from "./NavUtils";
 
 export default function Application() {
     const [application, setApplication] = useState({});
     const [confirmed, setConfirmed] = useState(false);
+
+    const params = useParams();
+    const jobName = toJobName(params.name);
+    console.log(jobName);
 
     let handleSectionUpdated = (section, updates) => {
         console.log("Section updated!", updates);
@@ -22,6 +28,9 @@ export default function Application() {
 
     return (
         <div className="d-flex f-column">
+            <div className="bold-6 text-center font-lg p-vertical-lg">
+                {jobName}
+            </div>
             <GeneralInformation
                 onChange={(section, updates) => handleSectionUpdated(section, updates)}
             />
@@ -42,7 +51,7 @@ export default function Application() {
             />
             <ConfirmationSection
                 onChange={(confirmed) => setConfirmed(confirmed)} />
-            <div className="d-flex justify-end">
+            <div className="d-flex m-bottom-lg justify-end">
                 <Button
                     color="blue"
                     disabled={!confirmed}
