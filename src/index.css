@@ -23,6 +23,7 @@ code {
 
 .justify-end {
   justify-content: end;
+  justify-items: flex-end;
 }
 
 .align-center {

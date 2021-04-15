@@ -20,8 +20,8 @@ function App() {
     <div className="App p-md">
       <Router>
         <div className="theme-font font-lg p-vertical-md m-bottom-lg text-center">
-          <img src={logo} alt="logo" style={{ height: "65px" }} className="m-bottom-md" />
-          <div className="theme-font font-md title-muted-text">Fantastic Birthday Force</div>
+          <img src={logo} alt="logo" style={{ height: "85px" }} className="m-bottom-md" />
+          <div className="theme-font font-lg title-muted-text">Fantastic Birthday Force</div>
         </div>
         <div className="d-flex justify-end">
           <Link to="/jobs">
