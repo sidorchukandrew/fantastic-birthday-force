@@ -11,7 +11,7 @@ import JobsListing from "./JobsListing";
 import PartyPerformerJob from './PartyPerformerJob';
 import PartyManagerJob from './PartyManagerJob';
 import logo from "./android-chrome-512x512.png";
-import { Button } from 'semantic-ui-react';
+import { Button } from "semantic-ui-react";
 import SuccessfulSubmission from './SuccessfulSubmission';
 
 
@@ -19,13 +19,11 @@ function App() {
   return (
     <div className="App p-md">
       <Router>
-        <div className="theme-font font-lg p-vertical-md m-bottom-lg d-flex align-center justify-space-between">
-          <div className="d-flex align-center">
-            <img src={logo} alt="logo" style={{ height: "55px" }} />
-            <span className="p-horiz-md">
-              Fantastic Birthday Force
-          </span>
-          </div>
+        <div className="theme-font font-lg p-vertical-md m-bottom-lg text-center">
+          <img src={logo} alt="logo" style={{ height: "65px" }} className="m-bottom-md" />
+          <div className="theme-font font-md title-muted-text">Fantastic Birthday Force</div>
+        </div>
+        <div className="d-flex justify-end">
           <Link to="/jobs">
             <Button basic>Jobs</Button>
           </Link>

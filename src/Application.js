@@ -10,6 +10,7 @@ import { useState } from "react";
 import { useParams, useHistory } from "react-router";
 import { toJobName } from "./NavUtils";
 import applicationsApi from "./api/applications";
+import ResumeSection from "./ResumeSection";
 
 export default function Application() {
     const [application, setApplication] = useState({});
@@ -69,8 +70,10 @@ export default function Application() {
             <ReferencesSection
                 onChange={(section, updates) => handleSectionUpdated(section, updates)}
             />
+            <ResumeSection />
             <ConfirmationSection
                 onChange={(confirmed) => setConfirmed(confirmed)} />
+
             <div className="d-flex m-bottom-lg justify-end">
                 <Button
                     color="blue"
