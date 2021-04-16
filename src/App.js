@@ -13,12 +13,14 @@ import PartyManagerJob from './PartyManagerJob';
 import logo from "./android-chrome-512x512.png";
 import { Button } from "semantic-ui-react";
 import SuccessfulSubmission from './SuccessfulSubmission';
+import ScrollToTop from "./ScrollToTop";
 
 
 function App() {
   return (
     <div className="App p-md">
       <Router>
+        <ScrollToTop />
         <div className="theme-font font-lg p-vertical-md m-bottom-lg text-center">
           <img src={logo} alt="logo" style={{ height: "85px" }} className="m-bottom-md" />
           <div className="theme-font font-lg title-muted-text">Fantastic Birthday Force</div>
