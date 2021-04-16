@@ -18,7 +18,7 @@ import ScrollToTop from "./ScrollToTop";
 
 function App() {
   return (
-    <div className="App p-md">
+    <div className="App p-lg" style={{ background: "white" }}>
       <Router>
         <ScrollToTop />
         <div className="theme-font font-lg p-vertical-md m-bottom-lg text-center">
